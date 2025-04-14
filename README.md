@@ -12,5 +12,5 @@ All datasets used in this study are provided in `./dataset`:
 # Environment
 The required dependenices can be installed via `pip` or `conda` from `requirements.txt`
 
-# Antiberta fine-tuning codes
-The fine-tuning codes for Antiberta on five downstream tasks are provided in `./codes`.
+# Codes
+Pretraining code and fine-tuning codes for Antiberta on five downstream tasks are provided in `./codes`.
