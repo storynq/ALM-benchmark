@@ -3,6 +3,7 @@ We present a comprehensive benchmark to evaluate the capabilities of eight **Ant
 
 # Datasets
 All datasets used in this study are provided in `./dataset`:
+* Representation_learning: Data about six IGHV subtypes for ALMs' representation learning
 * `/Paratope`: Data for paratope prediction
 * CDR_prediction: Data for CDR task
 * Her2_dataset: Data for HER2 binding prediction
