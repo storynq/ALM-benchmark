@@ -16,6 +16,8 @@ The required dependenices can be installed via `pip` or `conda` from `requiremen
 
 Code environment and some pretrained model files are provided on Zenodo, which can be download from this links: `ZZZZZZZENODO LINK!`
 
+Note: These are *Repretrained Models* used for our ablation study on pretraining data volume. The original models are available from their source publications.
+
 # Codes
 Fine-tuning codes for ALMs on five downstream tasks are provided in `./codes`.
 
@@ -45,6 +47,8 @@ python main.py --model antiberta --task paratope_prediction
 ```
 python main.py --model antiberta2 --task cdr_prediction --cdr_type CDR3
 ```
+### For BALM model
+For the BALM model, due to Python package conflicts with our main environment, we provide a dedicated BALM environment and code. The environment is availabel on Zenoda, the the BALM-specific code is separately located in the `codes` folder.
 
 Make sure all dependencies are installed and the model paths/data paths are correctly configured in ```config.yaml``` before running the framework
 
