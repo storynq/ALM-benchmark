@@ -1,0 +1,95 @@
+# config.yaml
+models:
+  antiberta:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/Antiberta"
+    tokenizer_path: "/home/hongnanqi/ALM_Benchmark/models/Antiberta/antibody-tokenizer"
+    learning_rate: 1e-6
+    batch_size: 32
+    max_length: 150
+  antiberta2:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/Antiberta2"
+    tokenizer_path: "/home/hongnanqi/ALM_Benchmark/models/Antiberta2"
+    learning_rate: 1e-6
+    batch_size: 32
+  antiberty:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/Antiberty"
+    tokenizer_path: "/home/hongnanqi/ALM_Benchmark/models/Antiberty/vocab.txt"
+    learning_rate: 1e-6
+    batch_size: 32
+  ReprogBert:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/ReprogBert/bert_model"
+    tokenizer_path: "/home/hongnanqi/ALM_Benchmark/models/ReprogBert/transformer_model"
+    learning_rate: 1e-5
+    batch_size: 32
+  Ablang:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/Ablang/ablang_model_heavy/"
+    tokenizer_path: "/home/hongnanqi/ALM_Benchmark/models/Ablang/ablang_model_heavy/vocab.json"
+    learning_rate: 1e-6
+    batch_size: 32
+  Ablang2:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/Ablang2/model.pt"
+    tokenizer_path: ""
+    learning_rate: 1e-6
+    batch_size: 32
+  Bert2DAb:
+    model_path: "/home/hongnanqi/ALM_Benchmark/models/Bert2Dab/model_H"
+    tokenizer_path: "/home/hongnanqi/ALM_Benchmark/models/Bert2Dab/model_H/vocab.txt"
+    learning_rate: 1e-6
+    batch_size: 32
+    max_length: 128
+
+
+tasks:
+  paratope_prediction:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/paratope/sabdab_train_clustered.parquet"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/paratope/sabdab_val_clustered.parquet"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/paratope/sabdab_test_clustered.parquet"
+  cdr_prediction:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/CDR/cdr_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/CDR/cdr_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/CDR/cdr_test.csv"
+  her2_prediction:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/HER2/her2_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/HER2/her2_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/HER2/her2_test.csv"
+  covid_prediction:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/Covid/covid_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/Covid/covid_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/Covid/covid_test.csv"
+  covid_prediction_X:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/Covid/covid_train_X.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/Covid/covid_val_X.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/Covid/covid_test.csv"
+  covid_prediction_Bert2DAb:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/covid/covid_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/covid/covid_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/covid/covid_test.csv"
+  vh_prediction:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/VH/VH_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/VH/VH_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/VH/VH_test.csv"
+  vh_prediction_Bert2DAb:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/VH/VH_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/VH/VH_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/VH/VH_test.csv"
+  vl_prediction:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/VL/VL_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/VL/VL_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/VL/VL_test.csv"
+  vl_prediction_Bert2DAb:
+    train_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/VL/VL_train.csv"
+    val_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/VL/VL_val.csv"
+    test_data: "/home/hongnanqi/ALM_Benchmark/datasets/Bert2Dab_Dataset/VL/VL_test.csv"
+
+
+
+trainer:
+  num_train_epochs: 500
+  warmup_ratio: 0
+  early_stopping_patience: 50
+  evaluation_strategy: "epoch"
+  save_strategy: "epoch"
+  save_total_limit: 3
+  logging_strategy: "epoch"
+  lr_scheduler_type: "linear"
+  metric_for_best_model: "aupr"
