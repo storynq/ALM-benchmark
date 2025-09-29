@@ -2,13 +2,14 @@
 We present a comprehensive benchmark to evaluate the capabilities of eight **Antibody Language Models (ALMs)** acorss multiple antibody design tasks.
 
 # Datasets
-All datasets used in this study are provided in `./dataset`:
+All datasets used in this study are provided in `./dataset`. Downstream task datasets are clustered using mmseqs2 and then divided into training, validation and testing sets based on stratified sampling.
 * Representation_learning: Data about six IGHV subtypes for ALMs' representation learning
-* `/Paratope`: Data for paratope prediction
-* CDR_prediction: Data for CDR task
-* Her2_dataset: Data for HER2 binding prediction
-* SARS-COV1 and SARS-COV2: Datasets for Covid binding prediction
+* Paratope: Data for paratope prediction
+* CDR: Data for CDR task
+* Her2: Data for HER2 binding prediction
+* Covid: Datasets for Covid binding prediction
 * VH & VL: Datasets for binding affinity prediction
+* Bert2DAb requires all datasets with tokens based on secondary structure, which are provided in `Bert2Dab_Dataset`.
 
 # Environment
 The required dependenices can be installed via `pip` or `conda` from `requirements.txt`
