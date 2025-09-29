@@ -11,8 +11,10 @@ All datasets used in this study are provided in `./dataset`. Downstream task dat
 * VH & VL: Datasets for binding affinity prediction
 * Bert2DAb requires all datasets with tokens based on secondary structure, which are provided in `Bert2Dab_Dataset`.
 
-# Environment
+# Environment&Pretrained_files
 The required dependenices can be installed via `pip` or `conda` from `requirements.txt`
+
+Code environment and some pretrained model files are provided on Zenodo, which can be download from this links: `ZZZZZZZENODO LINK!`
 
 # Codes
 Fine-tuning codes for ALMs on five downstream tasks are provided in `./codes`.
