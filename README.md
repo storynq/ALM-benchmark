@@ -14,7 +14,7 @@ All datasets used in this study are provided in `./dataset`. Downstream task dat
 # Environment&Pretrained_files
 The required dependenices can be installed via `pip` or `conda` from `requirements.txt`
 
-Code environment and some pretrained model files are provided on Zenodo, which can be download from this links: `ZZZZZZZENODO LINK!`
+Code environment and some pretrained model files are provided on Zenodo, which can be download from this links: `https://doi.org/10.5281/zenodo.17223336`
 
 Note: These are *Repretrained Models* used for our ablation study on pretraining data volume. The original models are available from their source publications.
 
